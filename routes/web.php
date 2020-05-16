@@ -12,17 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 //php9 テキスト
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('news/create', 'Admin\NewsController@add');
+  Route::get('news/create', 'Admin\NewsController@add');
 });
 
 //php9課題
 Route::group(['prefix' => 'admin/profile'], function(){
- Route::get('create', 'Admin\ProfileController@add');
- Route::get('edit' , 'Admin\ProfileController@edit');
+  Route::get('create', 'Admin\ProfileController@add');
+  Route::get('edit' , 'Admin\ProfileController@edit');
 });
 
