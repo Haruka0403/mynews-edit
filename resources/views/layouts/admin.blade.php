@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- 各ページごとにtitleタグを入れるために@yieldで空けておきます。 --}}
+    <!-- メモ：tittleはブラウザのバーに表示されるもの -->
     <title>@yield('title')</title>
 
     <!-- Scripts -->
