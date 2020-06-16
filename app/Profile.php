@@ -7,11 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
   protected $guarded = array('id');
-    //
+    
     public static $rules = array(
-      'title1' => 'required',
-      'title2' => 'required',
-      'title3' => 'required',
-      'body' => 'required',
+      'name' => 'required',
+      'gender' => 'required',
+      'hobby' => 'required',
+      'introduction' => 'required',
   );
+  
+  //Phistoriesに関連づける
+  public function phistories()
+  {
+    return $this -> hasMany('App\Phistory');
+  }
 }
